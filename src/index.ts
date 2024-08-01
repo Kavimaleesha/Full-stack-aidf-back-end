@@ -8,12 +8,12 @@ import GlobalErrorHandlingMiddleware from "./api/middleware/global-error-handler
 
 const app = express();
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
 connectDB();
 
 app.use("/jobs", jobsRouter);
-app.use("/jobApplications", jobApplicationRouter)
+app.use("/jobApplications", jobApplicationRouter);
 
 app.use(GlobalErrorHandlingMiddleware)
 
